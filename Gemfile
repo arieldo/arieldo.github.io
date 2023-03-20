@@ -19,7 +19,7 @@ gem 'bibtex-ruby', '~> 6.0.0'
 # If you have any plugins, put them here!
 group :jekyll_plugins do
   gem "jekyll-feed", "~> 0.12"
-  #gem "github-pages", "~> 228"
+  gem "github-pages", "~> 228"
   gem "jekyll-scholar"
 
   
