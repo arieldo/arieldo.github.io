@@ -58,6 +58,6 @@ plugins:
 
 
 scholar:
-  style: apa
+  style: modern-language-association
   source: _bibliography
   bibliography: bibliography.bib
