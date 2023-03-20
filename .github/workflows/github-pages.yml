@@ -31,10 +31,10 @@ jobs:
         token: ${{ secrets.YOUR_CUSTOM_TOKEN }}
         target_branch: 'gh-pages'
 
-    # - name: Install dependencies
-    #   run: |
-    #     bundle config path vendor/bundle
-    #     bundle install --jobs 4 --retry 3
+    - name: Install dependencies
+      run: |
+        # bundle config path vendor/bundle
+        bundle install --jobs 4 --retry 3
 
     - name: Build Jekyll site
       run: bundle exec jekyll build --trace
