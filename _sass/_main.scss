@@ -1,0 +1,141 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+@import "styles";
+
+
+$family-sans-serif: 'Montserrat', sans-serif;
+$primary: #177aa1 !default;
+
+$tabs-link-active-color: $primary;
+$tabs-link-active-border-bottom-color: $primary;
+
+$modal-content-width: 800px;
+
+@import "../node_modules/bulma/bulma.sass";
+$hero-darken: $dark !default;
+
+@import "layout";
+@import "syntax";
+@import "showcase";
+@import "../node_modules/bulma-block-list/src/block-list.scss";
+
+.gh-sponsor {
+  color: #ea4aaa;
+}
+
+.navbar {
+  height: 70px; // Adjust this value to change the height of the navbar
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 25px; // Adjust these values to control the padding inside the navbar
+  background-color: #182C4B; // Set the background color of the navbar
+  color: #ffffff; // Set the text color inside the navbar
+}
+
+
+.navbar-brand .navbar-item {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.navbar-burger {
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+  display: none;
+}
+
+.navbar-burger span {
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin: 2px 0;
+  background-color: #fff;
+}
+
+.navbar-menu {
+  display: flex;
+}
+
+.navbar-menu ul {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.navbar-menu li a {
+  color: #fff;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .navbar-burger {
+    display: block;
+  }
+
+  .navbar-menu {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color:#ffffff;
+  }
+
+  .navbar-menu ul {
+    flex-direction: column;
+  }
+
+  .navbar-menu.open {
+    display: flex;
+  }
+}
+
+.map-container {
+  position: relative;
+  overflow: hidden;
+  padding-bottom: 75%; /* Adjust this value based on the desired aspect ratio (e.g., 75% for 4:3 aspect ratio) */
+  height: 0;
+  width: 100%;
+}
+
+  #gmap_canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+
+.custom-link {
+  text-decoration: none;
+  color: #000;
+  position: relative;
+}
+
+.custom-link:hover {
+  color: #007bff; /* Change the link color on hover */
+}
+
+.custom-link::before {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #007bff;
+  visibility: hidden;
+  transition: all 0.3s ease-in-out;
+}
+
+.custom-link:hover::before {
+  visibility: visible;
+  width: 100%;
+}

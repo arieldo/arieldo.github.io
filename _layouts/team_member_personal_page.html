@@ -1,0 +1,100 @@
+---
+layout: team_member_base
+---
+
+<div class="columns is-multiline">
+
+    <div class="column is-4-desktop is-4-tablet">
+        <img src="{{ page.image }}" style="width: 85%; height:auto; object-fit: fill;">
+
+        <div class="buttons" style="text-align: center;">
+            {% if page.twitter %}
+            <a class="button" itemprop="twitter" href="{{ page.twitter }}" target="_blank">
+                <i class="fab fa-twitter fa-lg"></i>
+            </a>
+            {% endif %}
+            {% if page.youtube %}
+            <a class="button" itemprop="youtube" href="{{ page.youtube }}" target="_blank">
+                <i class="fab fa-youtube fa-lg"></i>
+            </a>
+            {% endif %}
+            {% if page.github %}
+            <a class="button" itemprop="github" href="{{ page.github }}" target="_blank">
+                <i class="fab fa-github fa-lg"></i>
+            </a>
+            {% endif %}
+            {% if page.email %}
+            <a class="button" itemprop="email" href="mailto:{{ page.email }}" target="_blank">
+                <i class="fas fa-envelope fa-lg"></i>      
+            </a>
+            {% endif %}
+            {% if page.facebook %}
+            <a class="button" itemprop="facebook" href="{{ page.facebook }}" target="_blank">
+                <i class="fab fa-facebook fa-lg"></i>
+            </a>
+            {% endif %}
+            {% if page.bitbucket %}
+            <a class="button" itemprop="bitbucket" href="{{ page.bitbucket }}" target="_blank">
+                <i class="fab fa-bitbucket fa-lg"></i>
+            </a>
+            {% endif %}
+            {% if page.linkedin %}
+            <a class="button" itemprop="linkedin" href="{{ page.linkedin }}" target="_blank">
+                <i class="fab fa-linkedin fa-lg"></i>
+            </a>
+            {% endif %}
+            {% if page.website %}
+            <a class="button" itemprop="website" href="{{ page.website }}" target="_blank">
+                <i class="fas fa-globe fa-lg"></i>
+            </a>
+            {% endif %}
+            {% if page.cv %}
+            <a class="button" itemprop="cv" href="{{ site.baseurl }}{{ page.cv }}" target="_blank">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+                    <text x="12" y="18" font-size="16" text-anchor="middle" fill="black" font-family="sans-serif" font-weight="bold">CV</text>
+                  </svg>
+            </a>
+            {% endif %}
+        </div>
+    </div>
+
+    <div class="column is-8-desktop is-4-tablet">
+        <p class="title is-3">{{ page.title }}</p>
+        <p class="subtitle is-3">{{ page.subtitle }}</p>
+
+        {% if page.deployment %}
+            <p class="subtitle is-3">{{ page.deployment }} - {{ page.last-contact }}</p>
+        {% endif %}
+
+        {% if page.graduation %}
+            <p class="subtitle is-3">{{ page.graduation }}</p>
+        {% endif %}
+
+        {% if page.next-position %}
+            <p class="subtitle is-4">{{ page.next-position }}</p>
+        {% endif %}
+
+        {% if page.bio %}
+        {% if page.category == "Principal Investigator" %}
+        {% for line in page.bio %}
+        <p class="subtitle is-6">{{ line }}<br></p>
+        {% endfor %}
+        {% else %}
+        {% for line in page.bio %}
+        <p class="subtitle is-4">{{ line }}<br></p>
+        {% endfor %}
+        {% endif %}
+        {% endif %}
+
+    </div>
+
+    <div>
+        <hr>
+        <div class="content">
+            {{ content }}
+        </div>
+    </div>
+    
+</div>
+
+

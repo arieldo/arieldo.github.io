@@ -1,0 +1,18 @@
+- name: Research
+  link: /research/
+- name: Publications
+  link: /publications/
+- name: Team
+  link: /current-members/
+- name: Student Projects
+  link: /student_projects/
+- name: Positions
+  link: /Positions/
+- name: Teaching
+  link: /Teaching/
+# - name: Software & Datasets
+#   link: /Software_and_Datasets/
+- name: Gallery
+  link: /gallery/
+- name: Directions
+  link: /directions/

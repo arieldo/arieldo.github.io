@@ -1,0 +1,12 @@
+.horizontal-grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 10px;
+  align-items: center;
+  justify-items: center;
+}
+
+.grid-item {
+  align-items: center;
+  justify-content: center; 
+}

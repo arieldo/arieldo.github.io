@@ -1,0 +1,25 @@
+---
+layout: default_for_research
+show_sidebar: false
+
+---
+
+<div class="columns is-multiline">
+
+    <div class="column is-6">
+            <img src="{{ page.image }}" style="width: 85%; height:auto; object-fit: fill;">
+    </div>
+
+    <div class="column is-6">
+        <p class="title is-3" style="text-align: center; margin-bottom: 1cm; ">{{ page.title }}</p>
+        <p class="subtitle is-3" style="text-align: center;">{{ page.subtitle }}</p>
+        <div class="descriptio">
+            {{ page.descriptio }}
+        </div>
+    </div>
+</div>
+
+<hr>
+<div class="content">
+    {{ content }}
+</div>
